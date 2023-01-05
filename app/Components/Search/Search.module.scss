@@ -1,0 +1,18 @@
+@import 'assets/styles/colors';
+.wrapper{
+  position: relative;
+  width: 33%;
+  >div{
+    position: relative;
+  }
+
+  &::before{
+    content: '';
+    position: absolute;
+    top: -150px;
+    background-color: $gray;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+  }
+}

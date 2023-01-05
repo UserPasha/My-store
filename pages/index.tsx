@@ -1,6 +1,14 @@
 import {Home} from '../app/Components/Home/Home'
+import {NextPage} from "next";
+import {Header} from "../app/Components/Header/Header";
 
-export default function HomePage () {
-  return <Home/>
+const HomePage: NextPage = () => {
+    return (
+        <>
+            <Header/>
+            <Home/>
+        </>)
 }
+
+export default HomePage
 

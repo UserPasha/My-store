@@ -1,0 +1,37 @@
+@import "assets/styles/colors";
+@import "assets/styles/mixins";
+
+.wrapper {
+  @include displayFlex(flex-start, center);
+
+  .navigation {
+    margin: 0;
+    padding: 0;
+
+    .list {
+      @include displayFlex(flex-start, center);
+
+      a {
+        position: relative;
+        letter-spacing: 3px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color:  $dark-green;
+        &::after{
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -3px;
+          width: 0;
+          height: 2px;
+          background-color: $dark-green;
+          transition: all 0.3s ease-in;
+        }
+        &:hover::after{
+          width: 100%;
+        }
+      }
+    }
+  }
+
+}

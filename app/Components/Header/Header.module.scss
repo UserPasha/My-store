@@ -1,0 +1,9 @@
+@import 'assets/styles/mixins';
+@import 'assets/styles/colors';
+.wrapper{
+  width: 100%;
+  height: 500px;
+  @include displayFlex(flex-start, space-evenly);
+  border: 1px solid black;
+
+}
