@@ -4,15 +4,31 @@
   width: 33%;
   >div{
     position: relative;
+    img{
+      position: relative;
+      top: 5px;
+      left: 30px;
+    }
+
+    .input{
+      margin: 1px 0;
+      width: 200px;
+      height: 36px;
+      border: 1px solid black;
+      border-radius: 20px;
+      padding: 0 30px;
+      font-size: 20px;
+    }
   }
 
   &::before{
     content: '';
     position: absolute;
+    left: -5%;
     top: -150px;
     background-color: $gray;
-    width: 320px;
-    height: 320px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
   }
 }

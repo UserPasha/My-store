@@ -11,8 +11,8 @@ export const Menu: FC = () => {
         <div className={style.wrapper}>
            <Link href='/'>
                <Image src={logoImage}
-                      width='500'
-                      height='250'
+                      width='200'
+                      height='100'
                       alt='Logo'/>
            </Link>
 
