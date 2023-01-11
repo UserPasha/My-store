@@ -4,9 +4,9 @@ import searchIcon from "../../../assets/images/Search_icon.svg";
 import Image from "next/image";
 
 
-export const Search:FC = () => {
+export const Search: FC = () => {
     const [searchValue, setSearchValue] = useState<string>('')
-    const onChangeHandler = (e:ChangeEvent<HTMLInputElement>)=>{
+    const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setSearchValue(e.currentTarget.value)
     }
 
@@ -17,7 +17,8 @@ export const Search:FC = () => {
                        width='20'
                        height='20'
                        alt='Search Icon'/>
-                <input className={style.input}
+                <input type='search'
+                       className={style.input}
                        placeholder={'search...'}
                        value={searchValue}
                        onChange={onChangeHandler}/>

@@ -1,4 +1,4 @@
-import {IMenuLink} from "./InterfaceMenuItem";
+import {IMenuLink} from "../../types/InterfaceMenuItem";
 
 export const menu:IMenuLink[] = [
     {

@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import style from './MenuItem.module.scss'
-import {IMenuLink} from "./InterfaceMenuItem";
+import {IMenuLink} from "../../types/InterfaceMenuItem";
 import Link from "next/link";
 
 interface IMenuItem {
