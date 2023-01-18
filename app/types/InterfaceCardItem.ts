@@ -1,7 +1,7 @@
-import {InterfaceProduct} from "./InterfaceProduct";
+import {IProduct} from "./InterfaceProduct";
 
 export interface ICardItem {
-    product: InterfaceProduct
+    product: IProduct
     quantity: number
     id: number
 }

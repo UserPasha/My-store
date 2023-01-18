@@ -7,7 +7,6 @@ import Image from "next/image";
 export const CartItem: FC<{ item: ICardItem }> = ({item}) => {
     return (
         <div className={style.wrapper}>
-
             <Image
                 src={item.product.images[0]}
                 width='100'
