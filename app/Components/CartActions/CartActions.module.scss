@@ -1,0 +1,35 @@
+@import 'assets/styles/mixins';
+@import 'assets/styles/colors';
+
+.wrapper{
+  @include displayFlex(center, center);
+  .button{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    border: 1px solid $gray;
+    background-color: $white-grey;
+    cursor: pointer;
+    &:hover{
+      background-color: $white;
+    }
+    &:disabled{
+      cursor: not-allowed;
+      background-color: $white;
+    }
+  }
+  .quantity{
+    margin:0 10px;
+    width: 100px;
+    height: 30px;
+    border: 1px solid $gray;
+    background-color: $white-grey;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+  }
+}
