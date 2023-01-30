@@ -35,14 +35,34 @@
     transform: translateX(0);
     transition: transform 0.3s ease-in-out;
 
+    .title{
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      letter-spacing: 3px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
     .closedButton {
       position: absolute;
       top: 10px;
       right: 10px;
       background: none;
-      border: none;
+      border: 1px solid transparent;;
       font-size: 16px;
       cursor: pointer;
+      opacity: 0.4;
+      &:hover{
+        border: 1px solid black;
+        border-radius: 5px;
+        opacity: 1;
+      }
+    }
+    .products{
+      margin-top: 50px;
+      width: 100%;
+      height: 100%;
     }
 
     .total-amount {

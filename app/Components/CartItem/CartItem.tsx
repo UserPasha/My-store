@@ -1,11 +1,15 @@
 import React, {FC} from 'react';
 import style from './CartItem.module.scss'
-import {ICardItem} from "../../types/InterfaceCardItem";
+import {ICartItem} from "../../types/InterfaceCardItem";
 import Image from "next/image";
 import {CartActions} from "../CartActions/CartActions";
 
 
-export const CartItem: FC<{ item: ICardItem }> = ({item}) => {
+
+export const CartItem: FC<{ item: ICartItem }> = ({item}) => {
+
+
+
     return (
         <div className={style.wrapper}>
             <Image
@@ -18,7 +22,7 @@ export const CartItem: FC<{ item: ICardItem }> = ({item}) => {
                <div className={style.price}>
                    {new Intl.NumberFormat(undefined, {style: 'currency', currency: 'USD'})
                        .format(item.product.price)}</div>
-               <CartActions/>
+               <CartActions item={item} />
            </div>
         </div>
     );

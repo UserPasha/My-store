@@ -1,7 +1,7 @@
-import {ICardItem} from "../../types/InterfaceCardItem";
+import {ICartItem} from "../../types/InterfaceCardItem";
 import {products} from "./DataProduct";
 
-export const cart:ICardItem[] = [
+export const cart:ICartItem[] = [
     {
      id: 1,
      quantity: 1,
