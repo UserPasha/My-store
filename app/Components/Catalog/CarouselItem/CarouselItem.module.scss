@@ -1,0 +1,29 @@
+@import 'assets/styles/mixins';
+@import 'assets/styles/colors';
+
+.wrapper {
+  @include displayFlex(center, center);
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin-left: 20px;
+  background-color: $light-green;
+  padding: 20px;
+
+
+  .image {
+    margin-top: -50px;
+  }
+
+  .header {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+  }
+
+  .description {
+    margin-top: 20px;
+    opacity: 0.9;
+  }
+}

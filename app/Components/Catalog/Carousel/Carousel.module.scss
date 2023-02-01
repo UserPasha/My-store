@@ -1,0 +1,9 @@
+@import 'assets/styles/mixins';
+@import 'assets/styles/colors';
+
+.wrapper{
+  @include displayFlex(center, center);
+  width: 800px;
+  height: 800px;
+  //background-color: $light-green;
+}

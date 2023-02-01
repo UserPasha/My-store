@@ -4,7 +4,7 @@ import {Carousel} from "./Carousel/Carousel";
 export const Catalog: FC = () => {
     return (
         <div>
-            <Carousel/>
+            <Carousel products={[]}/>
         </div>
     );
 };
