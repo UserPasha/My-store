@@ -2,8 +2,10 @@
 @import 'assets/styles/colors';
 
 .wrapper{
-  @include displayFlex(center, center);
-  width: 800px;
-  height: 800px;
-  //background-color: $light-green;
+  display: grid;
+  grid-template-columns: repeat(4, [col] 1fr);
+  grid-template-rows: repeat(2, [row] 1fr);
+  grid-gap: 40px 20px;
+  //grid-column-gap: 20px;
+  //grid-row-gap: 40px;
 }

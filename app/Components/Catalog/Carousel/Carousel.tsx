@@ -6,9 +6,9 @@ import {IProduct} from "../../../types/InterfaceProduct";
 
 export const Carousel:FC<{products: IProduct[]}> = ({products}) => {
     return (
-        <div className={style.wrapper}>
+        <section className={style.wrapper}>
             {cart.map(cart=> <CarouselItem key={cart.product.name} product={cart.product}/>)}
-        </div>
+        </section>
     );
 };
 
