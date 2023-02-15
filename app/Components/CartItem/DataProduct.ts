@@ -6,7 +6,7 @@ export const products: IProduct[] =[
     {
 
         id: 11,
-        name: 'Salt Ice Viking Taste',
+        name: 'Salt Ice Viking Taste One',
         description: 'Scandinavian Fresh with ice really good choice',
         images: [EnergyImage,
             Tobacco],
@@ -15,7 +15,7 @@ export const products: IProduct[] =[
     },
     {
         id: 12,
-        name: 'Salt Brand New Taste',
+        name: 'Salt Brand New Taste Two',
         description: 'Brand New Fresh brand new taste ',
         images: [Tobacco,
             EnergyImage],
@@ -35,6 +35,15 @@ export const products: IProduct[] =[
     {
         id: 14,
         name: 'Salt Brand Test Taste',
+        description: 'Brand New Fresh Test length symbols',
+        images: [EnergyImage,
+            Tobacco],
+        price: 20,
+        reviews: []
+    },
+    {
+        id: 15,
+        name: 'Salt Brand Test New',
         description: 'Brand New Fresh Test length symbols',
         images: [EnergyImage,
             Tobacco],

@@ -6,5 +6,5 @@ export interface IProduct {
     description: string
     price: number
     reviews: string[]
-    images: string[]
+    images: string[] | StaticImageData[]
 }
