@@ -1,17 +1,22 @@
-import React, {FC} from 'react';
+import React, {Dispatch, FC, SetStateAction} from 'react';
 import style from './CarouselVariation.module.scss'
 import {TypeSize} from "../../../store/types";
-import {useCart} from "../../../hooks/useCart";
+
 
 
 const SIZES:TypeSize[] = ['30 ml', '50 ml', '100 ml']
 
-export const CarouselVariation:FC<{productId: number}> = ({productId}) => {
-    const {cart} = useCart()
+interface ICarouselVariation {
+    productId: number
+    selectedSize: TypeSize
+    setSelectedSize: Dispatch<SetStateAction<TypeSize>>
+}
+export const CarouselVariation:FC<ICarouselVariation> = ({productId,selectedSize,setSelectedSize}) => {
 
     return (
         <div className={style.wrapper}>
-            {SIZES.map( size => <button className={style.variationButton} key={size}>{size}</button>)}
+            {SIZES.map( size =>
+                <button className={selectedSize===size ? style.selected : style.variationButton} key={size} onClick={()=>setSelectedSize(size)}>{size}</button>)}
         </div>
     );
 };

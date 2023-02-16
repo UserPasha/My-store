@@ -8,7 +8,7 @@ import {formatCurrency} from "../../utils/formatCurrency";
 
 
 export const CartItem: FC<{ item: ICartItem }> = ({item}) => {
-
+console.log(item)
 
 
     return (
@@ -20,9 +20,14 @@ export const CartItem: FC<{ item: ICartItem }> = ({item}) => {
                 alt={item.product.name}/>
            <div className={style.description}>
                <div className={style.name}>{item.product.name}</div>
-               <div className={style.price}>
-                   {formatCurrency(item.product.price)}
+               <div className={style.sizeAndPrice}>
+                   <div className={style.size}>{item.size}</div>
+                   <div className={style.price}>
+                       {formatCurrency(item.product.price)}
                    </div>
+               </div>
+
+
                <CartActions item={item} />
            </div>
         </div>

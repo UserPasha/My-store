@@ -10,9 +10,10 @@ export const cartSlice = createSlice({
     name: 'cart',
     initialState,
     reducers: {
+        //Check if the item exists in the cart. If it doesn't exist, we add it
         addToCart: (state, action: PayloadAction<IAddToCartPayload>) => {
-            const id = state.items.length
-            state.items.push({...action.payload, id})
+            const iSize = state.items.some(item => item.size === action.payload.size)
+            if(!iSize) state.items.push({...action.payload, id: state.items.length})
         },
         removeFromCart: (state, action: PayloadAction<{id: number}>) => {
             state.items = state.items.filter(
@@ -23,11 +24,6 @@ export const cartSlice = createSlice({
             const {id, type} = action.payload
             const item = state.items.find(item => item.id === id)
             if(item) type === 'plus' ?  item.quantity ++ : item.quantity --
-        },
-        changeSize: (state, action: PayloadAction<IChangeSizePayload>)=>{
-            const {id, size} = action.payload
-            const item = state.items.find(item => item.id === id)
-            if(item) item.size = size
         }
     }
 })

@@ -4,6 +4,17 @@
 .wrapper {
   position: relative;
 
+  .selected {
+    width: 60px;
+    height: 25px;
+    border: 1px solid $black;
+    border-radius: 20px;
+    margin: 10px 0 0 10px;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: $white;
+  }
+
   .variationButton {
     width: 60px;
     height: 25px;
@@ -13,7 +24,8 @@
     font-weight: bold;
     font-size: 14px;
     background-color: transparent;
-    &:hover{
+
+    &:hover {
       background-color: $gray;
       color: $white;
       border: 1px solid $white;
