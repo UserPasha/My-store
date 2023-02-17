@@ -8,11 +8,13 @@ const persistConfig = {
     whitelist: ['cart']
 }
 
-import {cartSlice} from "./slice";
+import {cartSlice} from "./cart/cart.slice";
 import {FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE} from "redux-persist";
+import {carouselSlice} from "./carousel/carousel.slice";
 
 const rootReducer = combineReducers({
-    cart: cartSlice.reducer
+    cart: cartSlice.reducer,
+    carousel: carouselSlice.reducer
 })
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 

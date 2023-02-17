@@ -26,6 +26,13 @@
     color: black;
     margin-top: 10px;
     height: 2.2em;
+    background: transparent;
+    border: none;
+    &:hover{
+      cursor: pointer;
+      text-shadow: $white 1px 0 3px;
+      transition: text-shadow 0.2s ease-in;
+    }
 
     > div {
       display: -webkit-box;
@@ -94,8 +101,10 @@
     color: $white;
     margin-top: 30px;
     height: 2.2em;
+    background: transparent;
+    border: none;
 
-    > div {
+    > span {
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;

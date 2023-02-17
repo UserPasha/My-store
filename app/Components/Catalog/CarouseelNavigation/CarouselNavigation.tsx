@@ -4,25 +4,26 @@ import Image from "next/image";
 import LeftArrow from "../../../../assets/images/ArrowToTheLeft.svg";
 import RightArrow from "../../../../assets/images/ArrowToTheRight.svg";
 import {ICarouselNavigation} from "../../../types/InterfaceCarousel";
+import {useActions} from "../../../hooks/useActions";
+
+import {cart} from "../../CartItem/DataCart";
 
 
-export const CarouselNavigation: FC<ICarouselNavigation> = ({
-                                                                product,
-                                                                isActive,
-                                                                prevIndexHandler,
-                                                                nextIndexHandler
-                                                            }) => {
+export const CarouselNavigation: FC<ICarouselNavigation> = ({product, isActive, selectSlide, index}) => {
+
+    const {nextSlide, prevSlide} = useActions()
+
     return (
         <div className={style.wrapper}>
             {isActive && <div className={style.buttons}>
                 <button className={style.selectItemButton}
-                        onClick={prevIndexHandler}>
+                        onClick={()=>prevSlide()}>
                     <Image src={LeftArrow}
                            alt={'to the left'}
                            width={'10'}/>
                 </button>
                 <button className={style.selectItemButton}
-                        onClick={nextIndexHandler}>
+                        onClick={()=>nextSlide({carouselLength: cart.length})}>
                     <Image src={RightArrow}
                            alt={'to the right'}
                            width={'10'}/>
@@ -32,7 +33,8 @@ export const CarouselNavigation: FC<ICarouselNavigation> = ({
                    src={product.images[0]}
                    alt={product.description}
                    width={200}
-                   draggable={false}/>
+                   draggable={false}
+                   onClick={() => selectSlide(index)}/>
         </div>
     );
 };

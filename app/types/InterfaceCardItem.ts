@@ -1,5 +1,5 @@
 import {IProduct} from "./InterfaceProduct";
-import {TypeSize} from "../store/types";
+import {TypeSize} from "../store/cart/cart.types";
 
 export interface ICartItem {
     product: IProduct

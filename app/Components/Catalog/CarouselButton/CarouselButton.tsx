@@ -2,7 +2,7 @@ import React, {Dispatch, FC, SetStateAction} from 'react';
 import style from './CarouselButton.module.scss'
 import {useActions} from "../../../hooks/useActions";
 import {IProduct} from "../../../types/InterfaceProduct";
-import {TypeSize} from "../../../store/types";
+import {TypeSize} from "../../../store/cart/cart.types";
  interface ICarouselButton {
      product: IProduct
      selectedSize: TypeSize

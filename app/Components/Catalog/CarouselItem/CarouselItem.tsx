@@ -1,37 +1,40 @@
-import React, {Dispatch, FC, SetStateAction, useState} from 'react';
-import {IProduct} from "../../../types/InterfaceProduct";
-import Image from "next/image";
+import React, {FC,  useState} from 'react';
 import style from "./CarouselItem.module.scss"
 import {useActions} from "../../../hooks/useActions";
 import {CarouselButton} from "../CarouselButton/CarouselButton";
 import {CarouselVariation} from "../CarouselVariation/CarouselVariation";
-import {TypeSize} from "../../../store/types";
+import {TypeSize} from "../../../store/cart/cart.types";
 import {CarouselNavigation} from "../CarouseelNavigation/CarouselNavigation";
 import {ICarousel} from "../../../types/InterfaceCarousel";
+import {useCarousel} from "../../../hooks/useCarousel";
 
 
-export const CarouselItem: FC<ICarousel> = ({product, isActive, setActive, nextIndexHandler, prevIndexHandler}) => {
+export const CarouselItem: FC<ICarousel> = ({product, index}) => {
 
     const [selectedSize, setSelectedSize] = useState<TypeSize>('30 ml')
-    const {addToCart} = useActions()
+    const {selectedItemIndex} = useCarousel()
+    const {selectSlide} = useActions()
+    const isActive = selectedItemIndex === index
 
     return (
-        <button className={isActive ? style.selected : style.wrapper}
-                onClick={setActive}>
+        <button className={isActive ? style.selected : style.wrapper}>
             <div>
                 <div className={style.itemContainer}>
 
-                    <CarouselNavigation isActive={isActive}
-                                        product={product}
-                                        nextIndexHandler={nextIndexHandler}
-                                        prevIndexHandler={prevIndexHandler}/>
+                    <CarouselNavigation product={product}
+                                        isActive={isActive}
+                                        selectSlide={selectSlide}
+                                        index={index}
+                    />
 
                 </div>
-                <div className={isActive ? style.active : style.header}>
-                    <div>
+                <button className={isActive ? style.active : style.header}
+                        onClick={() => selectSlide(index)}
+                >
+                    <span>
                         {product.name}
-                    </div>
-                </div>
+                    </span>
+                </button>
             </div>
             {isActive
                 ?

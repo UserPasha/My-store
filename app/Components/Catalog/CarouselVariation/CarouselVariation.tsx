@@ -1,6 +1,6 @@
 import React, {Dispatch, FC, SetStateAction} from 'react';
 import style from './CarouselVariation.module.scss'
-import {TypeSize} from "../../../store/types";
+import {TypeSize} from "../../../store/cart/cart.types";
 
 
 
