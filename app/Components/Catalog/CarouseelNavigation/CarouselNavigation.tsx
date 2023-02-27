@@ -17,14 +17,18 @@ export const CarouselNavigation: FC<ICarouselNavigation> = ({product, isActive, 
         <div className={style.wrapper}>
             {isActive && <div className={style.buttons}>
                 <button className={style.selectItemButton}
+                        aria-label='to the left item'
                         onClick={()=>prevSlide()}>
                     <Image src={LeftArrow}
+                           className={style.imageArrows}
                            alt={'to the left'}
                            width={'10'}/>
                 </button>
                 <button className={style.selectItemButton}
+                        aria-label='to the right item'
                         onClick={()=>nextSlide({carouselLength: cart.length})}>
                     <Image src={RightArrow}
+                           className={style.imageArrows}
                            alt={'to the right'}
                            width={'10'}/>
                 </button>

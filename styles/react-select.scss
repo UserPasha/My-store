@@ -1,0 +1,13 @@
+.custom-select {
+  &__control{
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid gray !important;
+  box-shadow: none !important;
+
+  &--menu-is-open {
+    border-color: #14380f !important;
+  }
+}
+}

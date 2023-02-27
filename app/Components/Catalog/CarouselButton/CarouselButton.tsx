@@ -3,18 +3,24 @@ import style from './CarouselButton.module.scss'
 import {useActions} from "../../../hooks/useActions";
 import {IProduct} from "../../../types/InterfaceProduct";
 import {TypeSize} from "../../../store/cart/cart.types";
- interface ICarouselButton {
-     product: IProduct
-     selectedSize: TypeSize
-     setSelectedSize: Dispatch<SetStateAction<TypeSize>>
- }
+import {useCart} from "../../../hooks/useCart";
 
-export const CarouselButton:FC<ICarouselButton> = ({product,selectedSize,setSelectedSize}) => {
+interface ICarouselButton {
+    product: IProduct
+    selectedSize: TypeSize
+    setSelectedSize: Dispatch<SetStateAction<TypeSize>>
+}
 
-    const {addToCart} = useActions()
+export const CarouselButton: FC<ICarouselButton> = ({product, selectedSize, setSelectedSize}) => {
+
+    const {addToCart, removeFromCart} = useActions()
+    const {cart} = useCart()
+    const currentItem = cart.find(cartItem => cartItem.product.id === product.id && cartItem.size === selectedSize)
 
     return (
-        <button className={style.openButton} onClick={() => addToCart({product, quantity: 1, size: selectedSize} )}> ADD TO BASKET </button>
+        <button className={style.openButton}
+                onClick={() => currentItem ? removeFromCart({id: currentItem.id}) : addToCart({product, quantity: 1, size: selectedSize})}
+        > {currentItem ? 'REMOVE FROM BASKET' : 'ADD TO BASKET' }</button>
     );
 };
 

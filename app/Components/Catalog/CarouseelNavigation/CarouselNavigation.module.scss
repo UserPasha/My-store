@@ -20,6 +20,12 @@
       &:hover {
         cursor: pointer;
       }
+      .imageArrows{
+        &:hover{
+          transform: scale(1.8);
+          transition: transform 0.3s ease-in;
+        }
+      }
     }
 
     .imageActive {

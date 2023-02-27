@@ -17,7 +17,8 @@ export const CarouselItem: FC<ICarousel> = ({product, index}) => {
     const isActive = selectedItemIndex === index
 
     return (
-        <button className={isActive ? style.selected : style.wrapper}>
+        <button className={isActive ? style.selected : style.wrapper}
+                aria-label='item'>
             <div>
                 <div className={style.itemContainer}>
 
@@ -29,6 +30,7 @@ export const CarouselItem: FC<ICarousel> = ({product, index}) => {
 
                 </div>
                 <button className={isActive ? style.active : style.header}
+                        aria-label='select item'
                         onClick={() => selectSlide(index)}
                 >
                     <span>
