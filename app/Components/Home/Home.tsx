@@ -10,7 +10,6 @@ export const Home: FC = () => {
         <Title>
           Choose your taste
         </Title>
-        <Sorting/>
         <Catalog/>
     </div>
 }
