@@ -8,7 +8,7 @@ import {
 import {cart} from "../../Components/CartItem/DataCart";
 
 const initialState: ICartInitialState = {
-    items: cart
+    items: []
 }
 
 export const cartSlice = createSlice({

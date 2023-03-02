@@ -90,6 +90,17 @@
 
   }
 
+  .linkMore{
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    &:hover{
+      cursor: pointer;
+      color: $white;
+      text-shadow: $black 1px 0 3px;
+    }
+  }
+
   .itemContainer {
     @include displayFlex(center, center);
 

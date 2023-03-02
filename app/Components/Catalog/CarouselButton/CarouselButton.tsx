@@ -8,10 +8,9 @@ import {useCart} from "../../../hooks/useCart";
 interface ICarouselButton {
     product: IProduct
     selectedSize: TypeSize
-    setSelectedSize: Dispatch<SetStateAction<TypeSize>>
 }
 
-export const CarouselButton: FC<ICarouselButton> = ({product, selectedSize, setSelectedSize}) => {
+export const CarouselButton: FC<ICarouselButton> = ({product, selectedSize}) => {
 
     const {addToCart, removeFromCart} = useActions()
     const {cart} = useCart()

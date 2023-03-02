@@ -7,6 +7,7 @@ import {TypeSize} from "../../../store/cart/cart.types";
 import {CarouselNavigation} from "../CarouseelNavigation/CarouselNavigation";
 import {ICarousel} from "../../../types/InterfaceCarousel";
 import {useCarousel} from "../../../hooks/useCarousel";
+import Link from "next/link";
 
 
 export const CarouselItem: FC<ICarousel> = ({product, index}) => {
@@ -43,7 +44,8 @@ export const CarouselItem: FC<ICarousel> = ({product, index}) => {
                 <>
                     <CarouselVariation productId={product.id} selectedSize={selectedSize}
                                        setSelectedSize={setSelectedSize}/>
-                    <CarouselButton product={product} selectedSize={selectedSize} setSelectedSize={setSelectedSize}/>
+                    <CarouselButton product={product} selectedSize={selectedSize} />
+                    <Link href={`/product/${product.slug}`} className={style.linkMore}>More</Link>
                 </>
 
                 :
