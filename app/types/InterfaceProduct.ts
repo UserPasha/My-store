@@ -9,3 +9,7 @@ export interface IProduct {
     reviews: string[]
     images: string[] | StaticImageData[]
 }
+
+export interface IProductDetails{
+    product: IProduct
+}

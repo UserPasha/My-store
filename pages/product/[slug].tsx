@@ -1,11 +1,9 @@
 import {GetStaticPaths, GetStaticProps, NextPage} from "next";
 import {ProductDetails} from "../../app/Components/ProductDetails/ProductDetails";
-import {IProduct} from "../../app/types/InterfaceProduct";
+import {IProduct, IProductDetails} from "../../app/types/InterfaceProduct";
 import {products} from "../../app/Components/CartItem/DataProduct";
 
-export interface IProductDetails{
-    product: IProduct
-}
+
 
 const ProductDetailsPage: NextPage<IProductDetails> = ({product}) => {
     return <ProductDetails product={product}/>

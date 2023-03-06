@@ -29,6 +29,7 @@ export const BreadCrumbs = () => {
             linkPath.shift();
 
             const pathArray = linkPath.map((path, i) => {
+                console.log(`path: ${path}, linkPath: ${linkPath}`)
                 return { breadcrumb: path, href: '/' + linkPath.slice(0, i + 1).join('/') };
             });
 
