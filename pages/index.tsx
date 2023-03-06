@@ -18,6 +18,13 @@ const HomePage: NextPage = () => {
                     <Weather/>
                 </PersistGate>
             </Provider>
+            {/*<Provider store={store}>*/}
+            {/*    <PersistGate loading={null} persistor={persistor}>*/}
+            {/*        <Header/>*/}
+            {/*        <Home/>*/}
+            {/*        <Weather/>*/}
+            {/*    </PersistGate>*/}
+            {/*</Provider>*/}
         </>)
 }
 

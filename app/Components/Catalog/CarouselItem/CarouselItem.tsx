@@ -1,7 +1,7 @@
 import React, {FC,  useState} from 'react';
 import style from "./CarouselItem.module.scss"
 import {useActions} from "../../../hooks/useActions";
-import {CarouselButton} from "../CarouselButton/CarouselButton";
+import {AddToCartButton} from "../../AddToCartButton/AddToCartButton";
 import {CarouselVariation} from "../CarouselVariation/CarouselVariation";
 import {TypeSize} from "../../../store/cart/cart.types";
 import {CarouselNavigation} from "../CarouseelNavigation/CarouselNavigation";
@@ -44,7 +44,7 @@ export const CarouselItem: FC<ICarousel> = ({product, index}) => {
                 <>
                     <CarouselVariation productId={product.id} selectedSize={selectedSize}
                                        setSelectedSize={setSelectedSize}/>
-                    <CarouselButton product={product} selectedSize={selectedSize} />
+                    <AddToCartButton product={product} selectedSize={selectedSize} />
                     <Link href={`/product/${product.slug}`} className={style.linkMore}>More</Link>
                 </>
 

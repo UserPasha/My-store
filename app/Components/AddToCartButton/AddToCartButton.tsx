@@ -1,16 +1,16 @@
 import React, {Dispatch, FC, SetStateAction} from 'react';
-import style from './CarouselButton.module.scss'
-import {useActions} from "../../../hooks/useActions";
-import {IProduct} from "../../../types/InterfaceProduct";
-import {TypeSize} from "../../../store/cart/cart.types";
-import {useCart} from "../../../hooks/useCart";
+import style from './AddToCartButton.module.scss'
+import {useActions} from "../../hooks/useActions";
+import {IProduct} from "../../types/InterfaceProduct";
+import {TypeSize} from "../../store/cart/cart.types";
+import {useCart} from "../../hooks/useCart";
 
 interface ICarouselButton {
     product: IProduct
     selectedSize: TypeSize
 }
 
-export const CarouselButton: FC<ICarouselButton> = ({product, selectedSize}) => {
+export const AddToCartButton: FC<ICarouselButton> = ({product, selectedSize}) => {
 
     const {addToCart, removeFromCart} = useActions()
     const {cart} = useCart()

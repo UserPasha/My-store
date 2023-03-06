@@ -5,7 +5,7 @@ import {IProductDetails} from "../../../types/InterfaceProduct";
 
 export const ProductInfo:FC<IProductDetails> = ({product}) => {
 
-
+    console.log(product)
 
     return (
         <div className={style.wrapper}>
