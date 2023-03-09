@@ -1,6 +1,6 @@
 import {IProduct} from "../../types/InterfaceProduct";
-import EnergyImage from './../../../assets/images/product/EnergyDrink.png'
-import Tobacco from './../../../assets/images/product/JDTobacco.png'
+import EnergyImage from '../../../assets/images/product/EnergyDrink.png'
+import Tobacco from '../../../assets/images/product/JDTobacco.png'
 
 export const products: IProduct[] =[
     {

@@ -5,20 +5,20 @@ import {IProductDetails} from "../../../types/InterfaceProduct";
 
 export const ProductInfo:FC<IProductDetails> = ({product}) => {
 
-    console.log(product)
-
     return (
         <div className={style.wrapper}>
-            <h1>{product.name}</h1>
-            <div>
+            <h2>{product.name}</h2>
+            <div className={style.descriptionContainer}>
                 <p>
                     {product.description}
                 </p>
             </div>
-            {product.images.map(image => (
-                <button key={product.id}>
-                <Image src={image} alt={product.name} width={100} height={100}/>
+            <div className={style.buttons}>
+            {product.images.map((image, index) => (
+                <button key={product.id * index}>
+                <Image src={image} alt={product.name} width={80} height={80}/>
             </button>))}
+            </div>
         </div>
     );
 };

@@ -1,3 +1,11 @@
-.wrapper{
+@import 'assets/styles/colors';
 
+.wrapper{
+  display: grid;
+  grid-template-columns: repeat(3, [col] 1fr);
+  grid-gap: 20px;
+  padding: 20px 40px;
+  border-radius: 20px;
+  background-color: $gray;
+  position: relative;
 }

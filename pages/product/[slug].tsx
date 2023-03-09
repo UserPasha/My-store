@@ -1,7 +1,7 @@
 import {GetStaticPaths, GetStaticProps, NextPage} from "next";
 import {ProductDetails} from "../../app/Components/ProductDetails/ProductDetails";
 import {IProduct, IProductDetails} from "../../app/types/InterfaceProduct";
-import {products} from "../../app/Components/CartItem/DataProduct";
+import {products} from "../../app/Components/ProductDetails/DataProduct";
 
 
 

@@ -1,4 +1,5 @@
 import {StaticImageData} from "next/image";
+import {IReview} from "./InterfaceReview";
 
 export interface IProduct {
     id: number
@@ -6,7 +7,7 @@ export interface IProduct {
     slug: string
     description: string
     price: number
-    reviews: string[]
+    reviews: IReview[]
     images: string[] | StaticImageData[]
 }
 
