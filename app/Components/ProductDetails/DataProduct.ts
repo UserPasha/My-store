@@ -1,6 +1,7 @@
 import {IProduct} from "../../types/InterfaceProduct";
 import EnergyImage from '../../../assets/images/product/EnergyDrink.png'
 import Tobacco from '../../../assets/images/product/JDTobacco.png'
+import {dataReview} from "./DataReview";
 
 export const products: IProduct[] =[
     {
@@ -22,7 +23,7 @@ export const products: IProduct[] =[
         images: [Tobacco,
             EnergyImage],
         price: 20,
-        reviews: []
+        reviews: [dataReview[0], dataReview[1], dataReview[2]]
     },
     {
         id: 13,

@@ -12,7 +12,7 @@ export const ProductVariations:FC<IProductDetails> = ({product}) => {
 
     return (
         <div className={style.wrapper}>
-           <ProductRating/>
+           <ProductRating product={product}/>
             <CarouselVariation productId={product.id} selectedSize={selectedSize} setSelectedSize={setSelectedSize}/>
             <AddToCartButton product={product} selectedSize={selectedSize}/>
         </div>

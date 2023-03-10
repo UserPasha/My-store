@@ -4,11 +4,15 @@ import Image from "next/image";
 import {IProductDetails} from "../../../types/InterfaceProduct";
 import {formatCurrency} from "../../../utils/formatCurrency";
 
-export const ProductImage: FC<IProductDetails> = ({product}) => {
+interface IProductImage  extends IProductDetails {
+    currentImageIndex: number
+}
+
+export const ProductImage: FC<IProductImage> = ({product, currentImageIndex}) => {
     return (
         <div className={style.wrapper}>
             <div className={style.imageContainer}>
-                <Image src={product.images[0]}
+                <Image src={product.images[currentImageIndex]}
                        alt={product.name}
                        width={250}
                        height={250}

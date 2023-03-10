@@ -24,12 +24,20 @@
   .buttons {
     @include displayFlex(center, center);
     margin-top: 20px;
+    .selected{
+      transform: scale(1.1);
+      border: 1px solid $dark-gray;
+      background-color: $white;
+      transition: all 0.3s ease-in;
+    }
 
     button {
-      background-color: $white;
+      background-color: $white-grey;
       border-radius: 20px;
       padding: 15px;
       margin-right: 20px;
+      border: 1px solid $black;
+      transition: all 0.3s ease-in;
 
       &:nth-last-child {
         margin-right: 0;
